@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="title-box">
+            <h1 class="title">spli <br />tter</h1>
+        </div>
+        <div class="card">
+            <!-- Form Start -->
+            <form class="form">
+                <div class="form-control">
+                    <label for="bill" class="label">bill</label>
+                    <div class="input-group">
+                        <img src="images/icon-dollar.svg" alt="dollar" />
+                        <input
+                            id="bill"
+                            class="form-input"
+                            type="number"
+                            step=".01"
+                            id="bill"
+                            placeholder="0"
+                        />
+                        <span class="err-span">Invalid value</span>
+                    </div>
+                </div>
+
+                <div class="tip-percent-choices-container">
+                    <p class="label">Select Tip %</p>
+                    <div class="tip-percent-choices">
+                        <div class="tip-percent percent">5%</div>
+                        <div class="tip-percent percent">10%</div>
+                        <div class="tip-percent percent">15%</div>
+                        <div class="tip-percent percent">25%</div>
+                        <div class="tip-percent percent">50%</div>
+                        <div class="percent-error">
+                            <input
+                                type="number"
+                                step=".01"
+                                class="form-input tip-input percent"
+                                placeholder="Custom"
+                            />
+                            <span class="err-span">Invalid value</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-control">
+                    <label for="bill" class="label">Number of People</label>
+                    <div class="input-group">
+                        <img src="images/icon-person.svg" alt="person" />
+                        <input
+                            id="num-of-people"
+                            class="form-input"
+                            type="number"
+                            step=".01"
+                            id="bill"
+                            placeholder="0"
+                        />
+                        <span class="err-span">Invalid value</span>
+                    </div>
+                </div>
+                <button type="submit" class="hidden"></button>
+            </form>
+            <!-- Form End -->
+            <!-- Results Start -->
+            <div class="results">
+                <!-- Result Start  -->
+                <div class="result">
+                    <div class="result-title-box">
+                        <h4 class="result-title">Tip Amount</h4>
+                        <p class="result-text">/ person</p>
+                    </div>
+                    <div id="tip-amount" class="result-price">$0.00</div>
+                </div>
+                <!-- Result End  -->
+                <!-- Result Start  -->
+                <div class="result">
+                    <div class="result-title-box">
+                        <h4 class="result-title">Total</h4>
+                        <p class="result-text">/ person</p>
+                    </div>
+                    <div id="total" class="result-price">$0.00</div>
+                </div>
+                <!-- Result End  -->
+                <button class="btn" disabled>RESET</button>
+            </div>
+            <!-- Results End -->
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

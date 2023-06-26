@@ -1,0 +1,217 @@
+:root {
+    --clr-cyan-6: hsl(172, 67%, 45%);
+
+    --clr-cyan-5: hsl(183, 100%, 15%);
+    --clr-cyan-4: hsl(186, 14%, 43%);
+    --clr-cyan-3: hsl(184, 14%, 56%);
+    --clr-cyan-2: hsl(185, 41%, 84%);
+    --clr-cyan-1: hsl(189, 41%, 97%);
+}
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Space Mono", monospace;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+input {
+    font-size: 1.5rem;
+}
+body {
+    background-color: var(--clr-cyan-2);
+    padding: 2rem 0;
+}
+.title-box {
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--clr-cyan-5);
+
+    margin-bottom: 2rem;
+    letter-spacing: 5px;
+}
+
+.card {
+    width: 900px;
+    max-width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 50% 1fr;
+    gap: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    padding: 2rem;
+}
+.form {
+    display: block;
+}
+.form-control {
+}
+.input-group {
+    position: relative;
+}
+.input-group img {
+    position: absolute;
+    top: 0.8rem;
+    left: 1rem;
+}
+.form-input {
+    text-align: right;
+    width: 100%;
+    border: 2px solid transparent;
+    background-color: var(--clr-cyan-1);
+    border-radius: 4px;
+    padding: 0.25rem 1rem;
+    cursor: pointer;
+    color: var(--clr-cyan-5);
+}
+.form-input::placeholder {
+    color: var(--clr-cyan-3);
+}
+.form-input:focus,
+.form-input:hover {
+    outline: 2px solid var(--clr-cyan-6);
+}
+.label {
+    color: var(--clr-cyan-4);
+    text-transform: capitalize;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+}
+.tip-percent-choices-container {
+    margin: 2rem 0;
+}
+.tip-percent-choices {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.tip-percent {
+    border-radius: 8px;
+    background-color: var(--clr-cyan-5);
+    color: #fff;
+    text-align: center;
+    padding: 0.25rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+.tip-percent:hover {
+    background-color: hsla(172, 67%, 45%, 0.5);
+    color: var(--clr-cyan-5);
+}
+
+/* results start */
+.results {
+    border-radius: 10px;
+    background-color: var(--clr-cyan-5);
+    padding: 2.5rem 2rem;
+    position: relative;
+}
+.result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.result-title {
+    color: var(--clr-cyan-1);
+}
+.result-text {
+    color: var(--clr-cyan-3);
+}
+.result-price {
+    color: var(--clr-cyan-6);
+    font-size: 2.5rem;
+}
+.btn {
+    background-color: var(--clr-cyan-6);
+    color: var(--clr-cyan-5);
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem;
+    position: absolute;
+    left: 2rem;
+    right: 2rem;
+    bottom: 2.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.btn:hover {
+    /* background-color: hsl(185, 44%, 84%); */
+    background-color: hsl(172, 90%, 69%);
+}
+.btn:disabled {
+    background-color: hsla(172, 67%, 45%, 0.25);
+}
+/* results end */
+
+/* Errors */
+.err-span {
+    position: absolute;
+    color: rgb(219, 66, 66);
+    font-size: 0.75rem;
+    white-space: nowrap;
+    display: none;
+}
+.percent-error {
+    position: relative;
+}
+.input-group .err-span {
+    top: -1.7rem;
+    right: 0.2rem;
+}
+.percent-error .err-span {
+    right: 0.75rem;
+    bottom: -2rem;
+}
+.error .form-input {
+    border: 2px solid rgb(219, 66, 66);
+}
+
+.error .form-input:hover,
+.error .form-input:focus {
+    outline: 1px solid rgb(219, 66, 66);
+}
+.error .err-span {
+    display: block;
+}
+
+.tip-percent.active {
+    background-color: hsla(172, 67%, 45%, 0.5);
+    color: var(--clr-cyan-5);
+}
+
+@media screen and (max-width: 700px) {
+    body {
+        padding-bottom: 0;
+    }
+    .card {
+        width: 100%;
+        max-width: 100%;
+        grid-template-columns: 1fr;
+        border-radius: 20px 20px 0 0;
+    }
+    .tip-percent-choices {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .results {
+        padding-bottom: 6rem;
+    }
+    .btn {
+        padding: 0.75rem;
+    }
+}
